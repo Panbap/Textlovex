@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập nội dung</title>
+    <link rel="icon" href="https://github.com/Panbap/anh/blob/main/icon1.png?raw=true" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+#loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            font-weight: 600;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            font-size: 24px;
+            color: #555;
+            flex-direction: column;
+        }
+
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #ff7094;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1.2s linear infinite;
+            margin-bottom: 15px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-text::after {
+            content: '';
+            display: inline-block;
+            animation: dots 1.5s steps(3, end) infinite;
+        }
+
+        @keyframes dots {
+
+            0%,
+            20% {
+                content: '';
+            }
+
+            40% {
+                content: '.';
+            }
+
+            60% {
+                content: '..';
+            }
+
+            80%,
+            100% {
+                content: '...';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <div id="loading-text">Loading</div>
+    </div>
+
+    <div class="container">
+        <h1>Nhập nội dung</h1>
+
+        <form id="contentForm">
+            <label for="mainText">Câu chính:</label>
+            <input type="text" id="mainText" name="mainText" placeholder="Anh yêu em..." required>
+
+            <label for="subText">Câu phụ:</label>
+            <input type="text" id="subText" name="subText"
+                placeholder="Dù ở vũ trụ nào anh vẫn yêu em" required>
+
+            <label>Chữ chạy trên xuống (messages):</label>
+            <div id="messagesInputs">
+                <input type="text" name="message" placeholder="Câu 1" required class="message-input">
+                <input type="text" name="message" placeholder="Câu 2" required class="message-input">
+            </div>
+            <button type="button" id="addMessageBtn">+ Thêm câu</button>
+
+            <label for="musicSelect" style="margin-top: 1.5rem;">Chọn nhạc nền:</label>
+            <select id="musicSelect" name="music">
+                <option value="">-- Không chọn --</option>
+                <option value="a.mp3">Nhac nền</option>
+                <option value="s.mp3">Happy birthday</option>
+                <option value="t.mp3">Thương em hơn chính mình</option>
+                <option value="c.mp3">Chạm vào mây</option>
+            </select>
+
+            <button type="submit">Tạo link</button>
+
+            <div id="resultContainer" class="result-container">
+                <button id="copyBtn" class="copy-btn">Copy</button>
+                <input type="text" id="resultLink" readonly class="result-link">
+            </div>
+        </form>
+
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 DevPan. A personal creation.</p>
+    </footer>
+    
+    <script>
+        const _0x1faf68=_0x2b8d;!function(e,t){const n=_0x2b8d,a=_0x1e8a();for(;;)try{if(764908===-parseInt(n(335))/1*(-parseInt(n(315))/2)+parseInt(n(348))/3*(parseInt(n(347))/4)+-parseInt(n(318))/5*(-parseInt(n(340))/6)+parseInt(n(350))/7*(-parseInt(n(314))/8)+parseInt(n(334))/9*(-parseInt(n(317))/10)+parseInt(n(331))/11+-parseInt(n(326))/12)break;a.push(a.shift())}catch(e){a.push(a.shift())}}();const loadingText=document[_0x1faf68(352)](_0x1faf68(330));let dots=0;const loadingInterval=setInterval((()=>{const e=_0x1faf68;dots=(dots+1)%4,loadingText[e(312)]=e(328)+"."[e(342)](dots)}),250);window[_0x1faf68(313)](_0x1faf68(339),(()=>{setTimeout((()=>{const e=_0x2b8d;clearInterval(loadingInterval),document[e(352)](e(316))[e(336)][e(327)]=e(343),document.getElementById(e(333))[e(336)][e(327)]="block"}),300)})),document.addEventListener(_0x1faf68(353),(function(e){const t=_0x1faf68;(e[t(320)]===t(311)||e.ctrlKey&&e[t(325)]&&("I"===e[t(320)]||"J"===e[t(320)])||e[t(321)]&&"U"===e[t(320)])&&e[t(323)]()})),document.addEventListener("contextmenu",(function(e){e[_0x1faf68(323)]()})),fetch(_0x1faf68(337))[_0x1faf68(324)]((e=>e.text()))[_0x1faf68(324)]((e=>{const t=_0x1faf68,n=new Blob([e],{type:t(322)}),a=URL[t(351)](n),o=document.createElement("script");o.src=a,document.body[t(354)](o)}));const offi=_0x1faf68(341),current=window[_0x1faf68(329)][_0x1faf68(346)];if(current!==offi){document.body[_0x1faf68(338)]="";const e=document[_0x1faf68(319)](_0x1faf68(344)),t=document[_0x1faf68(319)](_0x1faf68(344));t.innerText=" ",e[_0x1faf68(354)](t),document[_0x1faf68(349)][_0x1faf68(354)](e)}let devtoolsDetected=!1;function _0x2b8d(e,t){const n=_0x1e8a();return(_0x2b8d=function(e,t){return n[e-=311]})(e,t)}function _0x1e8a(){const e=["271814zdFMHs","loading-screen","10PuTwrS","10755UtwqyT","createElement","key","ctrlKey","application/javascript","preventDefault","then","shiftKey","23292348OEDuhF","display","Loading","location","loading-text","12291400WZhMxd","getTime","main-content","5862042XBpIDG","9usXxZt","style","./assets/input.js","innerHTML","load","1236HGzzge","panbap.github.io","repeat","none","div","reload","hostname","24IFPxxe","552111oazqeX","body","1238104SPvyKj","createObjectURL","getElementById","keydown","appendChild","F12","textContent","addEventListener","24BJxohr"];return(_0x1e8a=function(){return e})()}setInterval((()=>{const _0x33dc3a=_0x1faf68,_0x198cb3=(new Date)[_0x33dc3a(332)]();eval("debugger;");const _0x51c8fc=(new Date)[_0x33dc3a(332)](),_0x3ab938=_0x51c8fc-_0x198cb3>100;_0x3ab938&&!devtoolsDetected&&(devtoolsDetected=!0,document[_0x33dc3a(349)][_0x33dc3a(338)]='\n                    <h1 style="color:red; font-size: 28px; text-align: center; margin-top: 100px;"> 🚨 Đang mở DevTools!</h1>\n                    <h1 style="color:red; font-size: 24px; text-align: center;">Nhấn F12 để đóng.</h1>'),!_0x3ab938&&devtoolsDetected&&location[_0x33dc3a(345)]()}),1e3);
+    </script>
+
+</body>
+
+</html>
